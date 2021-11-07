@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import Navigation from './components/Navigation';
+import HeroSection from './components/HeroSection';
+import Cars from './components/Cars';
 import './App.css';
 
 function App() {
   return (
+    <>
+    <Navigation/>
+    <HeroSection/>
     <div className="App">
-        <h1>App page</h1>
+        <Cars/>
     </div>
+    </>
   );
 }
 
