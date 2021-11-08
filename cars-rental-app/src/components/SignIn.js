@@ -1,11 +1,17 @@
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { useState } from "react"
 import {logIn} from "../reducers/users/actions"
+import Navigation from "./Navigation";
 
  
 function SignIn() {
 
   const dispatch = useDispatch();
+  const state = useSelector((state)=>{
+    return{
+      userIsLogedIn: state.usersReducer
+    }
+  });
   const[userMail, setUserMail] = useState("")
   const[password,setpassword] = useState("")
 
@@ -27,6 +33,7 @@ function SignIn() {
   } 
     return (
       <>
+            <Navigation/>
             <div className="sign-in-div">
               <label htmlFor="email">Enter your email:</label>
               <input onChange={getUserEmail} type="email" id="email" name="email"/>  
