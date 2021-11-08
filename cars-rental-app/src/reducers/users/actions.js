@@ -11,3 +11,9 @@ export const signUP = (user)=>{
         payload:user
     }
 }
+
+export const logOut = ()=>{
+    return{
+        type:"LOG_OUT",
+    }
+}

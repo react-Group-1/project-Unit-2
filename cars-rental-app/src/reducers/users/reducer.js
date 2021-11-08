@@ -41,6 +41,12 @@ const usersReducer = (state = initialState , {type, payload}) =>{
                     extendUser:payload,
                     isLogedIn:true
             }
+            case "LOG_OUT":
+            return{
+                    users:state.users,
+                    extendUser:{},
+                    isLogedIn:false
+            }
         default:
             return state ;
             
