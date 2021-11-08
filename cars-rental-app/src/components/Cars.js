@@ -1,5 +1,6 @@
 import {useSelector} from "react-redux"
 import CarsList from "./CarsList";
+import Dropdown from 'react-bootstrap/Dropdown'
 import "./Cars.css"
 
 function Cars() {
@@ -16,7 +17,21 @@ function Cars() {
     }) } 
 
     return (
+
+
       <div className="car-main-div">
+<div className="Drop-down-div">
+<Dropdown>
+  <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+    Price Sort
+  </Dropdown.Toggle>
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1" onClick={() => {console.log("From lowest to highest")}}>From lowest to highest</Dropdown.Item>
+    <Dropdown.Item href="#/action-2" onClick={() => {console.log("From highest to lowest")}}>From highest to lowest </Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+</div>
       {viewCars()}
       </div>
     );
