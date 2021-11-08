@@ -33,6 +33,20 @@ const usersReducer = (state = initialState , {type, payload}) =>{
                     isLogedIn:true
                 }
             }
+            case "SIGN_UP":
+                let arrayOfUsers = state.users.slice();
+                arrayOfUsers.push(payload)
+            return{
+                    users:arrayOfUsers,
+                    extendUser:payload,
+                    isLogedIn:true
+            }
+            case "LOG_OUT":
+            return{
+                    users:state.users,
+                    extendUser:{},
+                    isLogedIn:false
+            }
         default:
             return state ;
             
