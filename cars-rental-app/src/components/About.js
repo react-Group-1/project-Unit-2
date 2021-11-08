@@ -1,11 +1,12 @@
 import Navigation from "./Navigation";
 
-function SignUp() {
+function About() {
     return (
       <>
         <Navigation/>
+        <h1>About us page</h1>
       </>
     );
   }
   
-  export default SignUp;
+  export default About;

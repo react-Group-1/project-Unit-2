@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav, FormControl, Button} from 'react-bootstrap';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import {Link} from "react-router-dom";
 
 function Navigation() {
 
@@ -9,31 +10,23 @@ function Navigation() {
 
     return (
         <>
-    <Navbar className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"> {/* https://mdbootstrap.com/snippets/jquery/ascensus/1727054#html-tab-view*/}
-        <div className="d-flex justify-content-start logo me-4"><h1>LOGO</h1></div>
-    <Container>
-    <Nav className="me-auto">
-      <Nav.Link onClick={() => {console.log("Home page")}}>Home</Nav.Link>
-      <Nav.Link onClick={() => {console.log("Deals page")}}>Deals</Nav.Link>
-      <Nav.Link onClick={() => {console.log("About us page")}}>About us</Nav.Link>
-      <Nav.Link onClick={() => {console.log("Cart page")}}>cart</Nav.Link>
-    </Nav>
-    </Container>
-
-    <Container className="d-flex justify-content-end">
-    <Nav className="d-flex flex-row-reverse">
-      <Nav.Link onClick={() => {console.log("Sign up page")}}>Sign up</Nav.Link>
-      <Nav.Link onClick={() => {console.log("Sign in page")}}>Sign in</Nav.Link>
-      </Nav>
-    </Container>
-        <FormControl onChange={(e) => {setSearcValue(e.target.value)}}
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button onClick={() => {console.log(searcValue)}} variant="outline-light">Search</Button>
-  </Navbar>
+       <nav>
+         <div className="logo">
+            Logo
+         </div>
+         <div className="nav-items">
+            <li><Link to= "/">Home</Link></li>
+            <li><Link to= "/Deals">Deals</Link></li>
+            <li><Link to= "/About">About</Link></li>
+            <li><Link to= "/BookingForm">Cart</Link></li>
+            <li><Link to= "/SignIn">Sign in</Link></li>
+            <li><Link to= "/SignUp">Sign up</Link></li>
+         </div>
+         <form action="#">
+            <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
+            <button onClick={() => {console.log(searcValue)}}><i className="bi bi-search"></i></button>
+         </form>
+      </nav>
         </>
     );
   }

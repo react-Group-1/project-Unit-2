@@ -1,11 +1,12 @@
 import Navigation from "./Navigation";
 
-function SignUp() {
+function Deals() {
     return (
       <>
         <Navigation/>
+        <h1>Deals page</h1>
       </>
     );
   }
   
-  export default SignUp;
+  export default Deals;
