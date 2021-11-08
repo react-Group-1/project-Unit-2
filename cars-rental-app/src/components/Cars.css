@@ -1,0 +1,5 @@
+.car-main-div{
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center;
+}
