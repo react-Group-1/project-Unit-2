@@ -42,7 +42,7 @@ function HeroSection() {
   </Carousel.Item>
 </Carousel>
 
-      
+  
 
       </>
     );
