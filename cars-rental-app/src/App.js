@@ -2,6 +2,8 @@ import Navigation from './components/Navigation';
  import HeroSection from './components/HeroSection';
 import Cars from './components/Cars';
 import './App.css';
+// don't forget to remove this Sign in
+// import SignIn from './components/SignIn';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
     <div className="App">
       <HeroSection/>
         <Cars/>
+        {/* <SignIn/> */}
     </div>
     </>
   );
