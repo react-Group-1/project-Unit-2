@@ -1,5 +1,5 @@
 import Navigation from './components/Navigation';
-// import HeroSection from './components/HeroSection';
+ import HeroSection from './components/HeroSection';
 import Cars from './components/Cars';
 import './App.css';
 
@@ -9,6 +9,7 @@ function App() {
     <Navigation/>
     {/* <HeroSection/> */}
     <div className="App">
+      <HeroSection/>
         <Cars/>
     </div>
     </>

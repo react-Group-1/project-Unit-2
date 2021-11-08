@@ -9,7 +9,7 @@ function Navigation() {
 
     return (
         <>
-    <Navbar className="my-nav" bg="dark" variant="dark">
+    <Navbar className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"> {/* https://mdbootstrap.com/snippets/jquery/ascensus/1727054#html-tab-view*/}
         <div className="d-flex justify-content-start logo me-4"><h1>LOGO</h1></div>
     <Container>
     <Nav className="me-auto">
