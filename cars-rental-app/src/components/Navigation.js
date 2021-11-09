@@ -42,15 +42,15 @@ function Navigation() {
             Logo
          </div>
          <div className="nav-items">
+            {userContext.toggle && <li className="user-name">{"Welcome " + userContext.userName}</li>}
             <li><Link to= "/">Home</Link></li>
             <li><Link to= "/Deals">Deals</Link></li>
             <li><Link to= "/About">About</Link></li>
             <li><Link to= "/BookingForm">Cart</Link></li>
             {!userContext.toggle && <li><Link to= "/SignIn">Sign in</Link></li>}
             {!userContext.toggle && <li><Link to= "/SignUp">Sign up</Link></li>}
-            {userContext.toggle && <li className="user-name">{"Welcome " + userContext.userName}</li>}
+            {userContext.toggle && <li><Link to= "/OrderDetails">My Orders</Link></li>}
             {userContext.toggle && <li onClick={logOutEvent}><Link to= "/">Logout</Link></li>}
-            
          </div>
          <form action="#">
             <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
