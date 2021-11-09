@@ -1,0 +1,39 @@
+.main{
+    background-color: rgb(93, 109, 104);
+}
+.carListCompnent{
+    display: grid;
+    grid-template-columns: 60%;
+    justify-content: center
+}
+.bookingForm{
+    background-color: yellow;
+}
+
+.Date{
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+.Cobone{
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+}
+
+table, td, th {  
+    border: 5px solid #ddd;
+    text-align: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 5px;
+  }

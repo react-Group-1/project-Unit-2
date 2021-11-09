@@ -45,14 +45,14 @@ const initialState = {
     function sortFromHtoL()
     {
         let carsAfterSorting ;
-        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(b.price) - parseFloat(a.price)); // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
 
         return carsAfterSorting;
     }
     function sortFromLtoH()
     {
         let carsAfterSorting ;
-        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price)); // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
 
         return carsAfterSorting;
     }
