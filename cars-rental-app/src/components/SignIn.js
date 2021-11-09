@@ -2,6 +2,7 @@ import {useDispatch, useSelector} from "react-redux"
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import {logIn} from "../reducers/users/actions"
+import "./SignIn.css"
  
 function SignIn() {
 
@@ -33,17 +34,19 @@ function SignIn() {
     navigate("/")
   } 
     return (
-      <>
+      < div className="Sign-In">
+
             <div className="sign-in-div">
-              <label htmlFor="email">Enter your email:</label>
+            <h1 id="titleid">Sign In Form</h1>
+              <label htmlFor="email" id="EmailLable">Enter your email</label>
               <input onChange={getUserEmail} type="email" id="email" name="email"/>  
               <br/>
               <label htmlFor="password">Enter Password</label>
               <input onChange={getPassword} type="password" id="password" name="password"/>
               <br/>
-              <button onClick={loginClick}>Login</button>
+              <button onClick={loginClick} type="button" className="btn btn-success">Login</button>
             </div>
-      </>
+      </div>
     );
   }
   

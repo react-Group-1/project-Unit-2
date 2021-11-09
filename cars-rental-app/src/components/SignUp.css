@@ -1,0 +1,32 @@
+
+::placeholder {
+  color: red;
+} 
+
+.Sign-Up{
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: solid 3px black;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-bottom:10px;
+  padding-left:10%;
+  padding-right:10%;
+  
+  
+}
+
+input[type=text], #password1,#confirm-password, input[type=email],input[type=UserName] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0 2px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#UserNameid, #titleid{
+  margin-top: 7%;
+}
