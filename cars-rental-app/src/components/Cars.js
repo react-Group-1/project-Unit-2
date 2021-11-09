@@ -13,7 +13,7 @@ function Cars() {
 
   const viewCars = ()=> {
       return state.carList.map((ele , index)=>{
-        return <CarsList id={ele.id} name={ele.name} brand={ele.brand} year={ele.year} price={ele.price} img={ele.img} />
+        return <CarsList key={index} id={ele.id} name={ele.name} brand={ele.brand} year={ele.year} price={ele.price} img={ele.img} />
     }) } 
 
     return (

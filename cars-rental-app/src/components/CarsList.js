@@ -6,7 +6,7 @@ function CarsList({id, name, brand,year, price, img}) {
       <div className="carDetails">
         <div className="leftSide">
           <div >
-            <img className="carImage" src={"./CarsImage/"+img} height="150px" width="250px" />
+            <img className="carImage" src={"./CarsImage/"+img} alt="car" height="150px" width="250px" />
           </div>
           <div className="details">
             <h3>{brand} {name}</h3>
