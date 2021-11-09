@@ -1,0 +1,67 @@
+
+.body-container{
+  display: grid;
+  border: black solid 1px;
+  border-radius: 5px;
+  min-height: 500px;
+  margin-top: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 30px;
+}
+.body-top{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.top-left{
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+}
+.top-right{
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+}
+.top-right h3{
+    text-align: center;
+    margin: 0;
+}
+.body-bottom{
+    display: grid;
+    justify-content: center;
+ }
+.from{
+    display: flex;
+}
+.from h5 {
+    padding: 5px;
+    margin: 5px 2px 2px 10px;
+}
+.from label{
+    padding: 5px;
+    margin: 5px 2px 2px 0px;
+}
+.my-btn{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1130px){
+    .top-left img{
+        height: 150px;
+        width: 250px;
+    }
+  }
+  @media (max-width: 940px){
+    .top-left img{
+        height: 100px;
+        width: 200px;
+    }
+  }
+  @media (max-width: 830px){
+    .body-top{
+        grid-template-columns: 1fr;
+    }
+  }
