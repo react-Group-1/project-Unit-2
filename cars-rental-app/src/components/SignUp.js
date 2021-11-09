@@ -1,10 +1,12 @@
 import {useDispatch} from "react-redux"
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom';
 import {signUP} from "../reducers/users/actions"
 import "./SignUp.css"
 import { useSelector } from 'react-redux';
 function SignUp(){
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   
   const state = useSelector((state) =>{
@@ -66,11 +68,11 @@ function printPassword2(){
   
   if(i===state.usersList.length-1){
     let userInfo = {id:i+2 ,name:name,email: email, pass: password2}
-    // console.log("info" ,userInfo)
     const action = signUP(userInfo)
     dispatch(action)
     setEmailErrorMsg("")
     setErrorMsg("")
+    navigate("/")
   }
 }
 console.log(state.usersList)
@@ -86,8 +88,8 @@ console.log(state.usersList)
      checkemail()
      }else{
       setErrorMsg("Password doesn't match")
-      document.getElementById("password").value=""
-      document.getElementById("confirm-password").value=""
+      // document.getElementById("password").value=""
+      // document.getElementById("confirm-password").value=""
      }
 
  }
