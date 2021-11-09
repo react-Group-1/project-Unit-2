@@ -36,9 +36,10 @@ const usersReducer = (state = initialState , {type, payload}) =>{
             case "SIGN_UP":
                 let arrayOfUsers = state.users.slice();
                 arrayOfUsers.push(payload)
+                let makeItArray = [payload]
             return{
                     users:arrayOfUsers,
-                    extendUser:payload,
+                    extendUser:makeItArray,
                     isLogedIn:true
             }
             case "LOG_OUT":
