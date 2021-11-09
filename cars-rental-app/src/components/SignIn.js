@@ -1,10 +1,12 @@
 import {useDispatch, useSelector} from "react-redux"
 import { useState } from "react"
+import { useNavigate } from 'react-router-dom';
 import {logIn} from "../reducers/users/actions"
 import "./SignIn.css"
  
 function SignIn() {
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state)=>{
     return{
@@ -29,6 +31,7 @@ function SignIn() {
     let userInfo = {email: userMail, pass: password}
     const action = logIn(userInfo)
     dispatch(action)
+    navigate("/")
   } 
     return (
       < div className="Sign-In">
@@ -41,7 +44,7 @@ function SignIn() {
               <label htmlFor="password">Enter Password</label>
               <input onChange={getPassword} type="password" id="password" name="password"/>
               <br/>
-              <button onClick={loginClick} type="button" class="btn btn-success">Login</button>
+              <button onClick={loginClick} type="button" className="btn btn-success">Login</button>
             </div>
       </div>
     );
