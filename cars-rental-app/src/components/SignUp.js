@@ -8,7 +8,6 @@ function SignUp(){
   const dispatch = useDispatch();
   
   const state = useSelector((state) =>{
-    console.log(state);
      return{
          usersList:state.usersReducer.users,
      }
@@ -67,6 +66,7 @@ function printPassword2(){
   
   if(i===state.usersList.length-1){
     let userInfo = {id:i+2 ,name:name,email: email, pass: password2}
+    // console.log("info" ,userInfo)
     const action = signUP(userInfo)
     dispatch(action)
     setEmailErrorMsg("")
