@@ -27,11 +27,28 @@ const initialState = {
     {id:"40",brand:"Chevrolet" ,name:"Tahoe",year:"2020",price:"400",img:"40-Chevrolet-Tahoe-2020.png"},]
 }
 
+
+    function FilterTheCars(searchBar)
+    {
+        let carsAfterSorting = []
+        // (gi) for  case-insensitive.
+        let searchBarAfterRegExp = new RegExp(searchBar, 'gi');
+        initialState.cars.map((ele , index) =>{
+            if(ele.name.match(searchBarAfterRegExp) !== null || ele.brand.match(searchBarAfterRegExp))
+            { 
+                carsAfterSorting.push(ele)
+            }
+        })
+        return carsAfterSorting;
+    }
 const carsReducer = (state = initialState , {type, payload}) =>{
     switch (type) {
+        case "FILTER_CARS_VIA_SEARCH_BAR":
+        return{
+            cars: FilterTheCars(payload),
+        }
         default:
             return state ;
-            break;
     }
 }
 export default carsReducer;
