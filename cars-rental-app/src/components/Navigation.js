@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import {Link} from "react-router-dom";
 import { logOut } from '../reducers/users/actions';
+import { sortCarsViaSearchBar } from "../reducers/cars/actions"
 import "./Navigation.css"
 
 function Navigation() {
@@ -35,6 +36,9 @@ function Navigation() {
     // this use state is used to set the value that user types in search feild
     const [searcValue, setSearcValue] = useState("");
 
+    const serachAction = ()=>{
+      dispatch(sortCarsViaSearchBar(searcValue))
+    }
     return (
         <>
        <nav>
@@ -52,10 +56,10 @@ function Navigation() {
             {userContext.toggle && <li><Link to= "/OrderDetails">My Orders</Link></li>}
             {userContext.toggle && <li onClick={logOutEvent}><Link to= "/">Logout</Link></li>}
          </div>
-         <form action="#">
+         
             <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
-            <button onClick={() => {console.log(searcValue)}}><i className="bi bi-search"></i></button>
-         </form>
+            <button onClick={() => {serachAction()}}><i className="bi bi-search"></i></button>
+         
       </nav>
         </>
     );

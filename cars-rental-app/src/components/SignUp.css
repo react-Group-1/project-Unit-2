@@ -1,7 +1,4 @@
-
-::placeholder {
-  color: red;
-} 
+#Email::placeholder {color: red;} 
 
 .Sign-Up{
   margin-top: 2%;
