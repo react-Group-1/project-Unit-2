@@ -1,8 +1,6 @@
 import {useDispatch, useSelector} from "react-redux"
 import { useState } from "react"
 import {logIn} from "../reducers/users/actions"
-import Navigation from "./Navigation";
-
  
 function SignIn() {
 
@@ -33,7 +31,7 @@ function SignIn() {
   } 
     return (
       <>
-            <Navigation/>
+
             <div className="sign-in-div">
               <label htmlFor="email">Enter your email:</label>
               <input onChange={getUserEmail} type="email" id="email" name="email"/>  

@@ -10,11 +10,13 @@ import About from './components/About';
 import Deals from './components/Deals';
 import Users from './components/Users';
 import BookingForm from './components/BookingForm'
+import Navigation from "./components/Navigation";
 import './App.css';
 
 function App() {
   return (
     <>
+      <Navigation/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/SignIn" element={<SignIn />} />
