@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+#coupon,#total{
+float: right;
+
+}
+
+.coupon-button{
+
+  margin-right: 5%;
+}
