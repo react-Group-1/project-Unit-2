@@ -1,11 +1,15 @@
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import CarsList from "./CarsList"
 import { useState } from "react"
+import { addOrder } from "../reducers/orders/actions"
 import "./BookingForm.css"
 function BookingForm() {
 
+  const dispatch = useDispatch();
   const state = useSelector((state)=>{
     return{
+      orders: state.ordersReducer,
+      checkLoggedIn:state.usersReducer,
       book: state.bookingReducer
     }
   })
@@ -24,6 +28,30 @@ function BookingForm() {
       }
   }
 
+  function CheckIfLoggedIn(){
+    if(state.checkLoggedIn.isLogedIn == false)
+    {
+      alert("You have to LogIn")
+    }
+    else{
+      let obj = 
+      {
+        id:state.book.SelectedCar.id,
+        name:state.book.SelectedCar.name,
+        brand:state.book.SelectedCar.brand,
+        year:state.book.SelectedCar.year,
+        price:state.book.SelectedCar.price,
+        img:state.book.SelectedCar.img,
+        startDate:startDate,
+        endDate:EndDate,
+        coupon:coupon,
+        totalPrice:((price * diffDays * 0.15) + (price * diffDays)) - coupon,
+      }
+      // console.log(obj)
+      dispatch(addOrder(obj))
+      alert("done, and delete this from cart because has been added in the order")
+    }
+  }
 
   const[startDate,setStratDate] = useState(0)
   const[EndDate,setEndDate] = useState(0)
@@ -97,7 +125,7 @@ function BookingForm() {
           </tr>
         </table>
         <hr/>
-        <button>Confirm Order</button>
+        <button onClick={CheckIfLoggedIn}>Confirm Order</button>
         </div>
 
       </div>
