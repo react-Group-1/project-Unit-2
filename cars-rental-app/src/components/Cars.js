@@ -60,8 +60,8 @@ function Cars() {
 
       {displayCars}
       <ReactPaginate
-      previousLabel={"Previous"}
-      nextLabel={"Next"}
+      previousLabel={"<"}
+      nextLabel={">"}
       pageCount={pageCount}
       onPageChange={changePage}
       containerClassName={"paginationBtns"}
