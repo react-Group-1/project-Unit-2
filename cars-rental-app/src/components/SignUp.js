@@ -98,14 +98,15 @@ console.log(state.usersList)
 return(
 
   <div className="Sign-Up">
-              <h1 id="titleid">Sign Up Form</h1>
-              <label htmlFor="UserName" id="UserNameid">Enter User Name</label>
+              <h1 id="titleid">Sign Up</h1>
+              <hr/>
+              <label htmlFor="UserName" id="UserNameid">UserName</label>
               <input onChange={getName} type="UserName" id="UserName" name="UserName"/>  
               <br/>
-              <label htmlFor="Email"> Enter Email</label>
+              <label htmlFor="Email">Email</label>
               <input onChange={getEmail} type="email" id="Email" name="Email" placeholder={emailErrorMsg}/>  
               <br/>
-              <label htmlFor="password">Enter Password</label>
+              <label htmlFor="password">Password</label>
               <input  onChange={getPassword1} type="password" id="password1" name="password" placeholder={passErrorMsg}/>
               <br/>
               <label htmlFor="confirm-password">Confirm Password</label>

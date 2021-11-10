@@ -2,6 +2,7 @@ import {useSelector, useDispatch} from "react-redux"
 import CarsList from "./CarsList"
 import { useState } from "react"
 import { addOrder } from "../reducers/orders/actions"
+import { Button } from 'react-bootstrap';
 import "./BookingForm.css"
 function BookingForm() {
 
@@ -87,18 +88,18 @@ function BookingForm() {
           <div className="bookingForm">
             <div className="Date">
               <div className="left">
-                <label htmlFor="fromDate">From: </label>
-                <input onChange={getStartDate} id="fromDate" type="date"/>
+                <label className="date-label" htmlFor="fromDate">From: </label>
+                <input className="my-input" onChange={getStartDate} id="fromDate" type="date"/>
               </div>
               <div className="right">
-                <label htmlFor="toDate">To: </label>
-                <input onChange={getEndDate} id="toDate" type="date"/>
+                <label className="date-label" htmlFor="toDate">To: </label>
+                <input className="my-input" onChange={getEndDate} id="toDate" type="date"/>
               </div>
             </div>
             <div className="Coupon">
-            <label htmlFor="Coupon">Add Coupon: </label>
-                <input id="coupon" type="txt" placeholder="Add KAS for 10% disc." />
-                <button onClick={applyCoupon}>Apply</button>
+            <label className="date-label" htmlFor="Coupon"></label>
+                <input className="my-coupon-input" id="coupon" type="txt" placeholder="Discount Coupon" />
+                <Button className="my-coupon-btn" onClick={applyCoupon} variant="warning">Apply</Button>
             </div>
           </div>
         <hr/>
@@ -112,24 +113,24 @@ function BookingForm() {
             <td>{price * diffDays}</td>
           </tr>
           <tr>
-            <td>15% Taxs</td>
+            <td>Taxs 15%</td>
             <td>{price * diffDays * 0.15}</td>
           </tr>
           <tr>
-            <td>Coupon discount</td>
+            <td>Discount Coupon</td>
             <td>{coupon}</td>
           </tr>
           <tr>
-            <td>Total Proce</td>
+            <td>Total Price</td>
             <td>{((price * diffDays * 0.15) + (price * diffDays)) - coupon}</td>
           </tr>
         </table>
         <hr/>
-        <button onClick={CheckIfLoggedIn}>Confirm Order</button>
+        <Button onClick={CheckIfLoggedIn} variant="success">Confirm Order</Button>
         </div>
 
       </div>
-      : <h1>The Cart is Empty</h1>}
+      : <h1 className="default-text">The Cart is Empty</h1>}
       </>
     );
   }

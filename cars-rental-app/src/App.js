@@ -8,7 +8,6 @@ import Orders from './components/Orders';
 import Admin from './components/Admin';
 import UserOrderDetails from './components/UserOrderDetails';
 import About from './components/About';
-import Deals from './components/Deals';
 import Users from './components/Users';
 import BookingForm from './components/BookingForm'
 import Navigation from "./components/Navigation";
@@ -33,7 +32,6 @@ function App() {
         <Route path="/Orders" element={<Orders />} />
         <Route path="/Admin" element={<Admin />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Deals" element={<Deals />} />
         <Route path="/UserOrderDetails" element={<UserOrderDetails />} />
         <Route path="/Users" element={<Users />} />
         <Route path="/BookingForm" element={<BookingForm />} />

@@ -45,11 +45,10 @@ function SignIn() {
 
             <div className="sign-in-div">
             <h1 id="titleid">Sign In Form</h1>
-              <label htmlFor="email" id="EmailLable">Enter your email</label>
-              <input onChange={getUserEmail} type="email" id="email" name="email"/>  
+            <hr/>
+              <input onChange={getUserEmail} type="email" id="email" name="email" placeholder="Email"/>  
               <br/>
-              <label htmlFor="password">Enter Password</label>
-              <input onChange={getPassword} type="password" id="password" name="password"/>
+              <input onChange={getPassword} type="password" id="password" name="password" placeholder="Password"/>
               <br/>
               <button onClick={loginClick} type="button" className="btn btn-success">Login</button>
             </div>
