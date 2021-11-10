@@ -34,7 +34,7 @@ function SignIn() {
     let userInfo = {email: userMail, pass: password}
     const action = logIn(userInfo)
     dispatch(action)
-    if(userInfo.email === "a@a.com"){
+    if(userInfo.email === "a@a.com" && userInfo.pass === "123"){
       navigate("/Admin")
     }else {
       navigate("/")
