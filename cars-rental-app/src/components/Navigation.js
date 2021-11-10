@@ -57,7 +57,6 @@ if(state.userIsLogedIn.isLogedIn){
             {userContext.adminToggle &&<li><Link to= "/Orders">Orders</Link></li>}
             {userContext.adminToggle &&<li><Link to= "/Users">Users</Link></li>}
             {!userContext.adminToggle &&<li><Link to= "/">Home</Link></li>}
-            {!userContext.adminToggle &&<li><Link to= "/Deals">Deals</Link></li>}
             {!userContext.adminToggle &&<li><Link to= "/About">About</Link></li>}
             {!userContext.adminToggle &&<li><Link to= "/BookingForm">Cart</Link></li>}
             {!userContext.toggle && !userContext.adminToggle && <li><Link to= "/SignIn">Sign in</Link></li>}
