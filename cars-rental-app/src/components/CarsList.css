@@ -67,17 +67,20 @@
         margin-bottom: 5px;
     }
     .carImage{
-        height: 250px;
-        width: 380px;
+        height: 210px;
+        width: 340px;
     }
     
     .leftSide{
         display:flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         margin-top: 8px;
     }
     .rightSide{
         display: inline;
+        text-align: center;
     }
     .leftSide h5{
         text-align: center;

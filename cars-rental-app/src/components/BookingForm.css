@@ -1,19 +1,20 @@
+
 .main{
-    background-color: rgb(93, 109, 104);
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
 .carListCompnent{
     display: grid;
     grid-template-columns: 60%;
-    justify-content: center
-}
-.bookingForm{
-    background-color: yellow;
+    justify-content: center;
 }
 
 .Date{
-    background-color: tomato;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
 }
 .Coupon{
@@ -26,14 +27,46 @@ label{
 
 table, td, th {  
     border: 5px solid #ddd;
+    border-radius: 8px;
     text-align: center;
   }
   
   table {
     border-collapse: collapse;
     width: 100%;
+    color: #393E46
   }
+.date-label{
+    color: #393E46;
+    padding: 10px;
+}
+.my-input{
+    border: solid 1px rgb(190, 189, 189);
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 2px;
+}
+.my-coupon-input{
+    margin-top: 10px;
+    border-radius: 2px;
+    padding: 5px;
+    border: solid 1px rgb(190, 189, 189);
+}
   
   th, td {
     padding: 5px;
+    background-color: #fff
   }
+
+  .default-text{
+      margin-top: 40px;
+      text-align: center;
+  }
+
+  @media (max-width: 800px){
+    
+    .Date{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

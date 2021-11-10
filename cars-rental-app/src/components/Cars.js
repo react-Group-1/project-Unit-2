@@ -48,7 +48,7 @@ function Cars() {
 <div className="Drop-down-div">
 <Dropdown>
   <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-    Price Sort
+    Sort by price
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
