@@ -19,8 +19,7 @@ function Cars() {
   // for pagination
   // first thing you need to inastall react-paginate
   // carList is an array of cars
-  const [cars, setCars] = useState(state.carList);
-  const ccc = state.carList;
+  const cars = state.carList;
   const [pageNumber, setPageNumber] = useState(0);
   // how many cars will represent in the page
   const carsPerPage = 10
@@ -31,14 +30,14 @@ function Cars() {
   // what items we gonna display it per page
   // we gonna use slice to to chose from  wich car to wich car we gonna display
   // it will take 2 variables : slice from (pagesVisited) to (pagesVisited + carsPerPage)
-  const displayCars = ccc.slice(pagesVisited, pagesVisited + carsPerPage).map((element)=>{
+  const displayCars = cars.slice(pagesVisited, pagesVisited + carsPerPage).map((element)=>{
     return(
       <CarsList key={element.id} id={element.id} name={element.name} brand={element.brand} year={element.year} price={element.price} img={element.img} />
     )
   })
 
   // to calculate the number of pages that we need
-  const pageCount = Math.ceil(ccc.length / carsPerPage)
+  const pageCount = Math.ceil(cars.length / carsPerPage)
 
   const changePage = ({selected}) => {
     setPageNumber(selected)

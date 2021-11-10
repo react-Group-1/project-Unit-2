@@ -1,19 +1,62 @@
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import CarsList from "./CarsList"
 import { useState } from "react"
+import { addOrder } from "../reducers/orders/actions"
 import "./BookingForm.css"
 function BookingForm() {
 
+  const dispatch = useDispatch();
   const state = useSelector((state)=>{
     return{
+      orders: state.ordersReducer,
+      checkLoggedIn:state.usersReducer,
       book: state.bookingReducer
     }
   })
 
+  function applyCoupon(){
+      if(document.getElementById("coupon").value === "KSA")
+      {
+        let calculateCoupon = ((price * diffDays * 0.15) + (price * diffDays)) * 0.10;
+        setCoupon(calculateCoupon)
+      }
+      else{
+        setCoupon(0)
+        let cc = document.getElementById("coupon");
+        cc.value=""
+        cc.placeholder="Invalid Coupon"
+      }
+  }
+
+  function CheckIfLoggedIn(){
+    if(state.checkLoggedIn.isLogedIn == false)
+    {
+      alert("You have to LogIn")
+    }
+    else{
+      let obj = 
+      {
+        id:state.book.SelectedCar.id,
+        name:state.book.SelectedCar.name,
+        brand:state.book.SelectedCar.brand,
+        year:state.book.SelectedCar.year,
+        price:state.book.SelectedCar.price,
+        img:state.book.SelectedCar.img,
+        startDate:startDate,
+        endDate:EndDate,
+        coupon:coupon,
+        totalPrice:((price * diffDays * 0.15) + (price * diffDays)) - coupon,
+      }
+      // console.log(obj)
+      dispatch(addOrder(obj))
+      alert("done, and delete this from cart because has been added in the order")
+    }
+  }
 
   const[startDate,setStratDate] = useState(0)
   const[EndDate,setEndDate] = useState(0)
   const[price,setPrice] = useState(0)
+  const[coupon,setCoupon] = useState(0)
 
 
   const getStartDate= (e) => {
@@ -52,10 +95,10 @@ function BookingForm() {
                 <input onChange={getEndDate} id="toDate" type="date"/>
               </div>
             </div>
-            <div className="Cobone">
-            <label htmlFor="Cobone">Add Cobone: </label>
-                <input id="Cobone" type="txt" placeholder="Add KAS for 10% disc." />
-                <button>Apply</button>
+            <div className="Coupon">
+            <label htmlFor="Coupon">Add Coupon: </label>
+                <input id="coupon" type="txt" placeholder="Add KAS for 10% disc." />
+                <button onClick={applyCoupon}>Apply</button>
             </div>
           </div>
         <hr/>
@@ -70,19 +113,19 @@ function BookingForm() {
           </tr>
           <tr>
             <td>15% Taxs</td>
-            <td>Not Yet</td>
+            <td>{price * diffDays * 0.15}</td>
           </tr>
           <tr>
-            <td>Cobone discount</td>
-            <td>Not Yet</td>
+            <td>Coupon discount</td>
+            <td>{coupon}</td>
           </tr>
           <tr>
             <td>Total Proce</td>
-            <td>Not Yet</td>
+            <td>{((price * diffDays * 0.15) + (price * diffDays)) - coupon}</td>
           </tr>
         </table>
         <hr/>
-        <button>Confirm Order</button>
+        <button onClick={CheckIfLoggedIn}>Confirm Order</button>
         </div>
 
       </div>
