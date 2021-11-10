@@ -48,7 +48,7 @@ if(state.userIsLogedIn.isLogedIn){
         <>
        <nav>
          <div className="logo">
-            Logo
+            <img className="logo-img" src ="./images/AppLogo.png" height="80px" width="100px"></img>
          </div>
          <div className="nav-items">
             {userContext.toggle && <li className="user-name">{"Welcome " + userContext.userName}</li>}

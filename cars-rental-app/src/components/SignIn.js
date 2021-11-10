@@ -44,7 +44,7 @@ function SignIn() {
       < div className="Sign-In">
 
             <div className="sign-in-div">
-            <h1 id="titleid">Sign In Form</h1>
+            <h1 id="titleid">Sign In</h1>
             <hr/>
               <input onChange={getUserEmail} type="email" id="email" name="email" placeholder="Email"/>  
               <br/>
