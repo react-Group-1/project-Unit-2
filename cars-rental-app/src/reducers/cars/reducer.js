@@ -41,11 +41,38 @@ const initialState = {
         })
         return carsAfterSorting;
     }
+
+    function sortFromHtoL()
+    {
+        let carsAfterSorting ;
+        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(b.price) - parseFloat(a.price)); // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+
+        return carsAfterSorting;
+    }
+    function sortFromLtoH()
+    {
+        let carsAfterSorting ;
+        carsAfterSorting = initialState.cars.sort((a, b) => parseFloat(a.price) - parseFloat(b.price)); // https://stackoverflow.com/questions/979256/sorting-an-array-of-objects-by-property-values
+
+        return carsAfterSorting;
+    }
+
+
+
+
 const carsReducer = (state = initialState , {type, payload}) =>{
     switch (type) {
         case "FILTER_CARS_VIA_SEARCH_BAR":
         return{
             cars: FilterTheCars(payload),
+        }
+        case "SORT_FROM_H_TO_L":
+        return{
+            cars: sortFromHtoL(),
+        }
+        case "SORT_FROM_L_TO_H":
+        return{
+            cars: sortFromLtoH(),
         }
         default:
             return state ;

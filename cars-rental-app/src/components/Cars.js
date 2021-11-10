@@ -1,5 +1,6 @@
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import { useState } from "react";
+import { sortFromHtoL, sortFromLtoH} from "../reducers/cars/actions"
 import ReactPaginate from 'react-paginate'
 import CarsList from "./CarsList";
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -7,6 +8,7 @@ import "./Cars.css"
 
 function Cars() {
 
+  const dispatch = useDispatch();
 
   const state = useSelector((state)=>{
     return{
@@ -51,8 +53,8 @@ function Cars() {
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1" onClick={() => {console.log("From lowest to highest")}}>From lowest to highest</Dropdown.Item>
-    <Dropdown.Item href="#/action-2" onClick={() => {console.log("From highest to lowest")}}>From highest to lowest </Dropdown.Item>
+    <Dropdown.Item href="#/action-1" onClick={() => {dispatch(sortFromLtoH())}}>From lowest to highest</Dropdown.Item>
+    <Dropdown.Item href="#/action-2" onClick={() => {dispatch(sortFromHtoL())}}>From highest to lowest </Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
       </div>
