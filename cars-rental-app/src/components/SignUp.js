@@ -67,7 +67,7 @@ function printPassword2(){
   }
   
   if(i===state.usersList.length-1){
-    let userInfo = {id:i+2 ,name:name,email: email, pass: password2}
+    let userInfo = {id:i+2 ,name:name,email: email, pass: password2, role:"user"}
     const action = signUP(userInfo)
     dispatch(action)
     setEmailErrorMsg("")
