@@ -65,9 +65,9 @@ if(state.userIsLogedIn.isLogedIn){
             {userContext.toggle && <li><Link to= "/OrderDetails">My Orders</Link></li>}
             {(userContext.toggle || userContext.adminToggle) && <li onClick={logOutEvent}><Link to= "/">Logout</Link></li>}
          </div>
-            {!userContext.adminToggle && <div>
-              <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
-            <button onClick={() => {serachAction()}}><i className="bi bi-search"></i></button>
+            {!userContext.adminToggle && <div className="my-form">
+            <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
+            <button className="search-btn" onClick={() => {serachAction()}}><i className="bi bi-search"></i></button>
             </div>}
             
          
