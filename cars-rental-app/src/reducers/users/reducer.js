@@ -1,5 +1,5 @@
 const initialState = {
-    users: [ {id:1, name:"saad",email:"s@s.com",password:"1234567890"},{id:2, name:"fahad",email:"f@f.com",password:"1234567890"}],
+    users: [ {id:1, name:"Admin",email:"a@a.com",password:"123", role:"admin"},{id:2, name:"fahad",email:"f@f.com",password:"1234567890",role:"user"}],
     extendUser:{},
     isLogedIn:false,
 }
