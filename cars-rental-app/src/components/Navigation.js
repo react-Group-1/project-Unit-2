@@ -22,15 +22,20 @@ function Navigation() {
   });
   // this line checks if user is logged in or not
   // if it is true we will remove signIn, SignUp from Navbar and replace it with the name of user
-  if(state.userIsLogedIn.isLogedIn){
-    userContext.setUserName(state.userIsLogedIn.extendUser[0].name)
-    userContext.setToggle(true)
+if(state.userIsLogedIn.isLogedIn){
+    if(state.userIsLogedIn.extendUser[0].role === "admin"){
+      userContext.setAdminToggle(true)
+    }else{
+      userContext.setUserName(state.userIsLogedIn.extendUser[0].name)
+      userContext.setToggle(true)
+    }
   }
 
   const logOutEvent = () =>{
     const action = logOut()
     dispatch(action)
     userContext.setToggle(false)
+    userContext.setAdminToggle(false)
   }
 
     // this use state is used to set the value that user types in search feild
@@ -47,18 +52,24 @@ function Navigation() {
          </div>
          <div className="nav-items">
             {userContext.toggle && <li className="user-name">{"Welcome " + userContext.userName}</li>}
-            <li><Link to= "/">Home</Link></li>
-            <li><Link to= "/Deals">Deals</Link></li>
-            <li><Link to= "/About">About</Link></li>
-            <li><Link to= "/BookingForm">Cart</Link></li>
-            {!userContext.toggle && <li><Link to= "/SignIn">Sign in</Link></li>}
-            {!userContext.toggle && <li><Link to= "/SignUp">Sign up</Link></li>}
+            {userContext.adminToggle && <li className="admin-name">{"Welcome Admin"}</li>}
+            {userContext.adminToggle &&<li><Link to= "/Admin">Admin</Link></li>}
+            {userContext.adminToggle &&<li><Link to= "/Orders">Orders</Link></li>}
+            {userContext.adminToggle &&<li><Link to= "/Users">Users</Link></li>}
+            {!userContext.adminToggle &&<li><Link to= "/">Home</Link></li>}
+            {!userContext.adminToggle &&<li><Link to= "/Deals">Deals</Link></li>}
+            {!userContext.adminToggle &&<li><Link to= "/About">About</Link></li>}
+            {!userContext.adminToggle &&<li><Link to= "/BookingForm">Cart</Link></li>}
+            {!userContext.toggle && !userContext.adminToggle && <li><Link to= "/SignIn">Sign in</Link></li>}
+            {!userContext.toggle && !userContext.adminToggle && <li><Link to= "/SignUp">Sign up</Link></li>}
             {userContext.toggle && <li><Link to= "/OrderDetails">My Orders</Link></li>}
-            {userContext.toggle && <li onClick={logOutEvent}><Link to= "/">Logout</Link></li>}
+            {(userContext.toggle || userContext.adminToggle) && <li onClick={logOutEvent}><Link to= "/">Logout</Link></li>}
          </div>
-         
-            <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
+            {!userContext.adminToggle && <div>
+              <input onChange={(e) => {setSearcValue(e.target.value)}} type="search" className="search-data" placeholder="Search"/>
             <button onClick={() => {serachAction()}}><i className="bi bi-search"></i></button>
+            </div>}
+            
          
       </nav>
         </>

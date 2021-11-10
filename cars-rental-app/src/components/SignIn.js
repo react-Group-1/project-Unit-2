@@ -9,6 +9,9 @@ function SignIn() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state)=>{
+    // console.log("-----------------")
+    // console.log(state.usersReducer)
+    // console.log("-----------------")
     return{
       userIsLogedIn: state.usersReducer
     }
@@ -31,7 +34,11 @@ function SignIn() {
     let userInfo = {email: userMail, pass: password}
     const action = logIn(userInfo)
     dispatch(action)
-    navigate("/")
+    if(userInfo.email === "a@a.com"){
+      navigate("/Admin")
+    }else {
+      navigate("/")
+    }
   } 
     return (
       < div className="Sign-In">

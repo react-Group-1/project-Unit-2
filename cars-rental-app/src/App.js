@@ -19,9 +19,10 @@ export const MyContext = createContext();
 function App() {
   const[userName,setUserName] = useState("")
   const[toggle,setToggle] = useState(false)
+  const[adminToggle,setAdminToggle] = useState(false)
   return (
     <>
-      <MyContext.Provider value={{userName: userName, setUserName: setUserName, toggle: toggle, setToggle: setToggle}}>
+      <MyContext.Provider value={{userName: userName, setUserName: setUserName, toggle: toggle, setToggle: setToggle, adminToggle: adminToggle, setAdminToggle: setAdminToggle}}>
         <Navigation/>
       </MyContext.Provider>
       <Routes>

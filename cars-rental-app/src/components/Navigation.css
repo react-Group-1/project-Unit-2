@@ -47,6 +47,9 @@ nav form{
 li.user-name{
     color: #00ADB5;
 }
+li.admin-name{
+  color: #00ADB5;
+}
 nav form .search-data{
   width: 100%;
   height: 100%;
