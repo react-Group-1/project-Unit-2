@@ -25,7 +25,7 @@ function BookingForm() {
     console.log("&&&")
     console.log(diffDays)
     console.log("&&&")
-    setPrice(diffDays*state.book.SelectedCar.price)
+    setPrice(state.book.SelectedCar.price)
   }
 
   const datee1=new Date(startDate) //calculting date
@@ -66,7 +66,7 @@ function BookingForm() {
           </tr>
           <tr>
             <td>Price</td>
-            <td>{price}</td>
+            <td>{price * diffDays}</td>
           </tr>
           <tr>
             <td>15% Taxs</td>
