@@ -4,3 +4,10 @@ export const addOrder = (ObjectOfOrder)=>{
         payload:ObjectOfOrder
     }
 }
+
+export const ApproveOrder = (id)=>{
+    return{
+        type:"APPROVE",
+        payload:id
+    }
+}
