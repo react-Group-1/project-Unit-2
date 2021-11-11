@@ -1,0 +1,17 @@
+.about-title,h5{
+    margin-top: 7%;
+    margin-left: 20%;
+
+}
+.about-title{
+
+    margin-top: 8%;
+}
+
+.our_vision{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 152, 152);
+}

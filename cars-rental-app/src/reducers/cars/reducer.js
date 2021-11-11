@@ -23,8 +23,8 @@ const initialState = {
     {id:"32",brand:"BMW" ,name:"520i" ,year:"2022",price:"660",img:"32-BMW-520i-2022.png" },{id:"33",brand:"BMW" ,name:"520i"  ,year:"2022",price:"460",img:"33-BMW-520i-2022.png" },
     {id:"34",brand:"Audi" ,name:"A6" ,year:"2022",price:"550",img:"34-AUDI-A6-2022.png" },{id:"35",brand:"Audi" ,name:"A6",year:"2021",price:"500",img:"35-AUDI-A6-2021.png" },
     {id:"36",brand:"Audi" ,name:"A6",year:"2020",price:"500",img: "36-AUDI-A6-2020.png"},{id:"37",brand:"Chevrolet" ,name:"Suburban" ,year:"2021",price:"450",img:"37-Chevrolet-Suburban-2021.png" },
-    {id:"38",brand:"Chevrolet" ,name:"Suburban",year:"2020",price:"450",img:"38-Chevrolet Suburban-2020.png" },{id:"39",brand:"Chevrolet" ,name:"Tahoe" ,year:"2021",price:"400",img:"39-Chevrolet-Tahoe-2021.png" },
-    {id:"40",brand:"Chevrolet" ,name:"Tahoe",year:"2020",price:"400",img:"40-Chevrolet-Tahoe-2020.png"},]
+    {id:"38",brand:"Chevrolet" ,name:"Suburban",year:"2020",price:"450",img:"38-Chevrolet_Suburban-2020.png" },{id:"39",brand:"Chevrolet" ,name:"Tahoe" ,year:"2021",price:"400",img:"39-Chevrolet-Tahoe-2021.png" },
+    {id:"40",brand:"Chevrolet" ,name:"Tahoe",year:"2020",price:"400",img:"40-Chevrolet_Tahoe-2020.png"},]
 }
 
 

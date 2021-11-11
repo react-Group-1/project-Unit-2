@@ -1,7 +1,7 @@
 .carDetails{
     display: flex;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
+    border: 3px solid rgb(0, 173, 181);
     padding: 10px;
     border-radius: 8px;
     width: 100%;
