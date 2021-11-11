@@ -8,16 +8,19 @@ function HeroSection() {
 
 <Carousel fade>
   <Carousel.Item>
+
+  <Carousel.Caption>
+  <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
     <img
       className="d-block w-100"
       src="./images/Lexus IS.jpg"
       alt="First slide"
     />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
+    
   </Carousel.Item>
+  
   <Carousel.Item>
     <img
       className="d-block w-100"
@@ -50,23 +53,18 @@ function HeroSection() {
     <Card.Body>
       <Card.Title className="title-text">Join Us</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+         
       </Card.Text>
     </Card.Body>
-    <Card.Footer>
-    <button className="text-muted">Join us</button>
-    </Card.Footer>
+    
   </Card>
   <Card className="cards">
     <Card.Img  id="cardImg" variant="top"  src="./images/deals.png"/>
     <Card.Body>
       <Card.Title className="title-text">Find Deals</Card.Title>
       <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+        
       </Card.Text>
-      <button className="text-muted">Join us</button>
     </Card.Body>
     
   </Card>
@@ -75,14 +73,10 @@ function HeroSection() {
     <Card.Body>
       <Card.Title className="title-text">Contact Us</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
+        
       </Card.Text>
     </Card.Body>
-    <Card.Footer>
-      <button className="text-muted">Contact info</button>
-    </Card.Footer>
+    
   </Card>
 </div>
 
