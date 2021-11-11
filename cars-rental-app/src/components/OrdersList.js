@@ -1,7 +1,18 @@
 import { Button } from 'react-bootstrap';
 import "./OrdersList.css"
+import { ApproveOrder } from "../reducers/orders/actions"
+import {useDispatch} from "react-redux"
 
-function OrdersList({img, name, brand, startDate, endDate, totalPrice ,status}) {
+
+function OrdersList({id, img, name, brand, startDate, endDate, totalPrice ,status}) {
+
+  const dispatch = useDispatch();
+
+  const Approve = ()=>{
+    dispatch(ApproveOrder(id))
+    // console.log("GG")
+  }
+
     return (
       <>
         <tbody>
@@ -12,7 +23,7 @@ function OrdersList({img, name, brand, startDate, endDate, totalPrice ,status}) 
               <td>{endDate}</td>
               <td>{totalPrice} $</td>
               <td>{status}</td>
-              {status === "pending" ? <td><Button className="successBTN" variant="success">Approve</Button> <Button variant="danger">Reject</Button></td> : ""}
+              {status === "pending" ? <td><Button onClick={Approve} className="successBTN" variant="success">Approve</Button> <Button variant="danger">Reject</Button></td> : ""}
             </tr>
           </tbody>
       </>

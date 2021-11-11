@@ -13,7 +13,7 @@ function Orders() {
 
   const showOrders = ()=>{
     return state.ordersList.orders.map((ele , index) =>{
-      return <OrdersList img={ele.img} name={ele.name} brand={ele.brand} startDate={ele.startDate} endDate={ele.endDate} totalPrice={ele.totalPrice} status={ele.status} />
+      return <OrdersList id={ele.id} img={ele.img} name={ele.name} brand={ele.brand} startDate={ele.startDate} endDate={ele.endDate} totalPrice={ele.totalPrice} status={ele.status} />
     })
   }
     return (
