@@ -10,7 +10,6 @@ function OrderDetails() {
       orders: state.ordersReducer,
     }
   })
-  let status = "pending"
 
   const showOrders = ()=>{
     return state.orders.orders.map((ele,index)=>{
@@ -29,7 +28,7 @@ function OrderDetails() {
             <div className="from"><h5>End date:</h5><label>{ele.endDate}</label></div>
             <div className="from"><h5>Discount coupon:</h5><label>{ele.coupon}</label></div>
             <div className="from"><h5>Total price:</h5><label>{ele.totalPrice}</label></div>
-            <div className="from"><h5>Status:</h5><label>{status}</label></div>
+            <div className="from"><h5>Status:</h5><label>{ele.status}</label></div>
             <hr/>            
         </div>
             </>
