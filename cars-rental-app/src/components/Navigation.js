@@ -46,7 +46,7 @@ if(state.userIsLogedIn.isLogedIn){
     }
     return (
         <>
-       <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+       <nav className="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar"> {/*https://mdbootstrap.com/snippets/jquery/ascensus/1727054#html-tab-view*/ }
          <div className="logo">
             <img className="logo-img" src ="./images/AppLogo.png" height="80px" width="100px"></img>
          </div>

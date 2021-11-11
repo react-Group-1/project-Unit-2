@@ -1,18 +1,20 @@
 
 .body-container{
   display: grid;
-  border: black solid 1px;
+  border: rgb(0, 173, 181) solid 3px;
   border-radius: 5px;
   min-height: 500px;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-left: 25%;
   margin-right: 25%;
   margin-bottom: 30px;
+  background-color:rgb(242, 242, 242);
 }
 .body-top{
     padding: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 .top-left{
     padding: 10px;
@@ -34,14 +36,17 @@
  }
 .from{
     display: flex;
+    
 }
 .from h5 {
     padding: 5px;
     margin: 5px 2px 2px 10px;
+    
 }
 .from label{
     padding: 5px;
     margin: 5px 2px 2px 0px;
+    
 }
 .my-btn{
     margin-top: 10px;

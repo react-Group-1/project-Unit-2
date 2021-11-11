@@ -6,13 +6,14 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: solid 1px #393E46;
+  border: solid 3px rgb(0, 173, 181);
   border-radius: 5px;
   margin-left: 30%;
   margin-right: 30%;
   padding-bottom:10px;
   padding-left:10%;
   padding-right:10%;
+  background-color:rgb(242, 242, 242);
 }
 
 input[type=text], #password1,#confirm-password, input[type=email],input[type=UserName] {
@@ -21,9 +22,13 @@ input[type=text], #password1,#confirm-password, input[type=email],input[type=Use
   margin: 5px 0 2px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background: #fffefe;
 }
 
 #UserNameid, #titleid{
   margin-top: 7%;
+}
+#btnColor{
+
+  background-color: rgb(0, 173, 181);
 }

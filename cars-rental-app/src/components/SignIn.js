@@ -50,7 +50,7 @@ function SignIn() {
               <br/>
               <input onChange={getPassword} type="password" id="password" name="password" placeholder="Password"/>
               <br/>
-              <button onClick={loginClick} type="button" className="btn btn-success">Login</button>
+              <button onClick={loginClick} type="button" className="btn btn-success" id="btnColor">Login</button>
             </div>
       </div>
     );

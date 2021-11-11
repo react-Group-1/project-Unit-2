@@ -48,7 +48,7 @@ function HeroSection() {
   <Card className="cards">
     <Card.Img  id="cardImg" variant="top" src="./images/joinj.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title className="title-text">Join Us</Card.Title>
       <Card.Text>
         This is a wider card with supporting text below as a natural lead-in to
         additional content. This content is a little bit longer.
@@ -61,7 +61,7 @@ function HeroSection() {
   <Card className="cards">
     <Card.Img  id="cardImg" variant="top"  src="./images/deals.png"/>
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title className="title-text">Find Deals</Card.Title>
       <Card.Text>
         This card has supporting text below as a natural lead-in to additional
         content.{' '}
@@ -73,7 +73,7 @@ function HeroSection() {
   <Card className="cards">
     <Card.Img id="cardImg" variant="top" src="./images/email.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title className="title-text">Contact Us</Card.Title>
       <Card.Text>
         This is a wider card with supporting text below as a natural lead-in to
         additional content. This card has even longer content than the first to

@@ -10,13 +10,16 @@
 .cards{
 margin: 10%;
 align-items: center;
-
-    justify-content: center;
+ justify-content: center;
 }
 
 #cardImg{
 
     width: 50%;
    
+}
+.title-text{
+
+    color:rgb(0, 173, 181);
 }
 

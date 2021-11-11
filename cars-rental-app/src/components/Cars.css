@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 60%;
     justify-content: center;
+    background-color:rgb(242, 242, 242);
 }
 
 .Drop-down-div{

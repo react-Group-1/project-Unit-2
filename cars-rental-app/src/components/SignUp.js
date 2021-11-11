@@ -112,7 +112,7 @@ return(
               <label htmlFor="confirm-password">Confirm Password</label>
               <input  onChange={getPassword2} type="password" id="confirm-password" name=" confirm-password" placeholder={passErrorMsg}/>
               <br/><br/>
-              <button onClick={CheckPassword} type="button" className="btn btn-success" >Sign Up</button>
+              <button onClick={CheckPassword} type="button" className="btn btn-success" id="btnColor" >Sign Up</button>
               
 
   </div>
