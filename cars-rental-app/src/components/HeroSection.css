@@ -23,4 +23,36 @@ align-items: center;
     color:rgb(0, 173, 181);
 }
 
+.hero-txt {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 30.25rem;
+    color: #fff;
+    text-align: left;
+}
+.hero-txt-1{
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 27.25rem;
+    color: black;
+    text-align: right;
+}
 
+@media (max-width: 700px){
+    .card_div{
+    grid-template-columns: 1fr 1fr;
+}
+  }
+
+@media (max-width: 480px){
+    .card_div{
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+  }
