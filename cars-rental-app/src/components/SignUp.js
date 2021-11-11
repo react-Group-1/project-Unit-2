@@ -62,12 +62,11 @@ function printPassword2(){
   if(state.usersList[i].email=== email ){
     setEmailErrorMsg(" Email already exists")
     document.getElementById("Email").value=""
-    console.log("87654")
     break
   }
   
   if(i===state.usersList.length-1){
-    let userInfo = {id:i+2 ,name:name,email: email, pass: password2, role:"user"}
+    let userInfo = {id:i+2 ,name:name,email: email, password: password2, role:"user"}
     const action = signUP(userInfo)
     dispatch(action)
     setEmailErrorMsg("")
