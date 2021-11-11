@@ -11,3 +11,9 @@ export const ApproveOrder = (id)=>{
         payload:id
     }
 }
+export const RReject = (id)=>{
+    return{
+        type:"REJECT",
+        payload:id
+    }
+}

@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import "./OrdersList.css"
-import { ApproveOrder } from "../reducers/orders/actions"
+import { ApproveOrder, RReject } from "../reducers/orders/actions"
 import {useDispatch} from "react-redux"
 
 
@@ -10,6 +10,10 @@ function OrdersList({id, img, name, brand, startDate, endDate, totalPrice ,statu
 
   const Approve = ()=>{
     dispatch(ApproveOrder(id))
+    // console.log("GG")
+  }
+  const Reject = ()=>{
+    dispatch(RReject(id))
     // console.log("GG")
   }
 
@@ -23,7 +27,7 @@ function OrdersList({id, img, name, brand, startDate, endDate, totalPrice ,statu
               <td>{endDate}</td>
               <td>{totalPrice} $</td>
               <td>{status}</td>
-              {status === "pending" ? <td><Button onClick={Approve} className="successBTN" variant="success">Approve</Button> <Button variant="danger">Reject</Button></td> : ""}
+              {status === "pending" ? <td><Button onClick={Approve} className="successBTN" variant="success">Approve</Button> <Button onClick={Reject} variant="danger">Reject</Button></td> : ""}
             </tr>
           </tbody>
       </>
