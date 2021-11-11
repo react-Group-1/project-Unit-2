@@ -50,6 +50,7 @@ function BookingForm() {
         startDate:startDate,
         endDate:EndDate,
         coupon:coupon,
+        status:"pending",
         totalPrice:((price * diffDays * 0.15) + (price * diffDays)) - coupon,
       }
       // console.log(obj)

@@ -13,13 +13,14 @@ function Orders() {
 
   const showOrders = ()=>{
     return state.ordersList.orders.map((ele , index) =>{
-      return <OrdersList img={ele.img} name={ele.name} brand={ele.brand} startDate={ele.startDate} endDate={ele.endDate} totalPrice={ele.totalPrice} />
+      return <OrdersList img={ele.img} name={ele.name} brand={ele.brand} startDate={ele.startDate} endDate={ele.endDate} totalPrice={ele.totalPrice} status={ele.status} />
     })
   }
     return (
       <>
-      <h1>{state.ordersList.orders.length} Orders :</h1>
+      
       <div className="tableInfo">
+      <h1>{state.ordersList.orders.length} Orders :</h1>
         <Table striped bordered hover>
             <thead>
               <tr>
