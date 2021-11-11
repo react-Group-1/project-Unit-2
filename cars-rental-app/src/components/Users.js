@@ -1,6 +1,7 @@
 import {useSelector} from "react-redux"
 import UsersList from "./UsersList";
 import "./Users.css"
+import { Table } from 'react-bootstrap';
 
 
 function Users() {
@@ -14,15 +15,24 @@ function Users() {
 
     return (
       <>
+      <div className="tableInfo">
+        <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>password</th>
+              </tr>
+            </thead>
+
       {result.map((element)=>{
-    return(
-      <div className="table-container">
-        <table>
+        return(
           <UsersList key={element.id} id={element.id} name={element.name} email={element.email} password={element.password}/>
-          </table>
-      </div>
-    )
-  })}
+              )})
+      }
+          </Table>
+          </div>
       </>
     );
   }
