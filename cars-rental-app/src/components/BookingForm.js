@@ -126,7 +126,7 @@ function BookingForm() {
           </tr>
         </table>
         <hr/>
-        <Button onClick={CheckIfLoggedIn} variant="success">Confirm Order</Button>
+        <Button onClick={CheckIfLoggedIn} variant="success" id="ConfirmBtn">Confirm Order</Button>
         </div>
 
       </div>
