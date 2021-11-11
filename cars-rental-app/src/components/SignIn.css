@@ -1,6 +1,7 @@
  
   .Sign-In{
-  margin-top: 2%;
+  margin-top: 8%;
+  position: fixed;  /* source: https://www.w3schools.com/css/css_positioning.asp*/
   margin-bottom: 2%;
   display: flex;
   flex-direction: column;

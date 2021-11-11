@@ -1,0 +1,22 @@
+.card_div{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cards{
+margin: 10%;
+align-items: center;
+
+    justify-content: center;
+}
+
+#cardImg{
+
+    width: 50%;
+   
+}
+
