@@ -2,10 +2,14 @@ import {useSelector, useDispatch} from "react-redux"
 import CarsList from "./CarsList"
 import { useState } from "react"
 import { addOrder } from "../reducers/orders/actions"
+import { deleteCar } from "../reducers/booking/actions"
 import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+
 import "./BookingForm.css"
 function BookingForm() {
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state)=>{
     return{
@@ -49,8 +53,9 @@ function BookingForm() {
         totalPrice:((price * diffDays * 0.15) + (price * diffDays)) - coupon,
       }
       // console.log(obj)
-      dispatch(addOrder(obj))
-      alert("done, and delete this from cart because has been added in the order")
+      dispatch(addOrder(obj));
+      dispatch(deleteCar());
+      navigate("/OrderDetails")
     }
   }
 
@@ -66,9 +71,6 @@ function BookingForm() {
 
   const getEndDate= (e) => {
     setEndDate(e.target.value)
-    console.log("&&&")
-    console.log(diffDays)
-    console.log("&&&")
     setPrice(state.book.SelectedCar.price)
   }
 
