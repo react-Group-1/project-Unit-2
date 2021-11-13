@@ -7,6 +7,11 @@
     margin-right: 5%;
 }
 
+.cards:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
 .cards{
 margin: 10%;
 align-items: center;
@@ -46,7 +51,7 @@ align-items: center;
 
 @media (max-width: 700px){
     .card_div{
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
 }
   }
 
