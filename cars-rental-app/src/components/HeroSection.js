@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import './HeroSection.css';
 
 function HeroSection() {
+  const navigate = useNavigate();
     return (
       <>
 
@@ -29,28 +31,16 @@ function HeroSection() {
     />
 
     <Carousel.Caption bsPrefix="hero-txt">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>Beyond your expectations</h3>
+      <p>Good Car for Good Moments</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
 
-<Carousel.Item>
 
-<Carousel.Caption bsPrefix="hero-txt-1">
-    <h3>Beyond your expectations</h3>
-    <p>Good Car for Good Moments</p>
-  </Carousel.Caption>
-  <img
-    className="d-block w-100"
-    src="./images/Lexus IS.jpg"
-    alt="First slide"
-  />
-  
-</Carousel.Item>
 
 < div className="card_div">
-  <Card className="cards">
+  <Card className="cards" onClick ={() => {navigate("/SignUp")}}>
     <Card.Img  id="cardImg" variant="top" src="./images/joinj.png" />
     <Card.Body>
       <Card.Title className="title-text">Join Us</Card.Title>
@@ -60,7 +50,7 @@ function HeroSection() {
     </Card.Body>
     
   </Card>
-  <Card className="cards">
+  <Card className="cards" onClick ={() => {alert("Use 'KSA' Coupon to get 10% Discount")}}>
     <Card.Img  id="cardImg" variant="top"  src="./images/deals.png"/>
     <Card.Body>
       <Card.Title className="title-text">Find Deals</Card.Title>
